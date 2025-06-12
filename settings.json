@@ -50,12 +50,12 @@
     "window.commandCenter": false, // false -> desabilita o Command Palette
     "window.menuBarVisibility": "hidden", // hidden -> esconde a barra de menu
     "window.restoreWindows": "all", // all -> restaura todas as janelas
-    "window.zoomLevel": 1, // 2 -> zoom do editor
+    "window.zoomLevel": 2, // 2 -> zoom do editor
     // Workbench
+    "breadcrumbs.enabled": false, // false -> desabilita breadcrumbs caminhos de navegação
     "workbench.startupEditor": "newUntitledFile", // newUntitledFile -> abre um novo arquivo ao iniciar
     "workbench.list.smoothScrolling": true, // true -> ativa a rolagem suave
     "workbench.iconTheme": "material-icon-theme", // symbols -> usa o tema de ícones Symbols
-    "material-icon-theme.hidesExplorerArrows": true, // true -> esconde as setas do explorador
     "workbench.editor.labelFormat": "short", // short -> usa o formato de rótulo curto
     "workbench.editor.empty.hint": "hidden", // hidden -> esconde a dica de arquivo vazio
     "workbench.tree.renderIndentGuides": "none", // none -> desabilita as guias de indentação
@@ -70,7 +70,6 @@
     "workbench.editor.showTabs": "single", // single -> exibe abas de editor em uma única linha
     "workbench.editor.tabSizing": "fit", // shrink -> reduz o tamanho das abas
     "workbench.tips.enabled": false, // true -> ativa dicas de trabalho
-    "breadcrumbs.enabled": false, // false -> desabilita breadcrumbs
     // Editor
     "editor.lineNumbers": "on", // on -> exibe os números de linha
     "editor.fontSize": 14, // 14 -> tamanho da fonte do editor
@@ -112,13 +111,14 @@
     "editor.codeActionsOnSave": { // ações de código ao salvar
         "source.fixAll.eslint": "explicit"
     },
-    "editor.cursorSurroundingLines": 5,
-    "editor.cursorSurroundingLinesStyle": "all",
-    "editor.cursorBlinking": "solid",
+    "editor.cursorSurroundingLines": 5, // 5 -> número de linhas ao redor do cursor
+    "editor.cursorSurroundingLinesStyle": "all", // all -> exibe o cursor em torno de todas as linhas
+    "editor.cursorBlinking": "solid", // solid -> estilo de piscar do cursor
     "editor.cursorStyle": "block", // block -> estilo do cursor
     //"vsintellicode.modify.editor.suggestSelection": "choseToUpdateConfiguration", // choseToUpdateConfiguration -> escolhe atualizar a configuração
     //"github.copilot.editor.enableAutoCompletions": true,
     // Explorer
+    "material-icon-theme.hidesExplorerArrows": true, // true -> esconde as setas do explorador
     "explorer.decorations.badges": false, // true -> ativa os badges de decorações
     "explorer.compactFolders": false, // false -> desabilita as pastas compactas
     "explorer.confirmDelete": false, // false -> desabilita a confirmação de exclusão
@@ -234,77 +234,6 @@
     "git.autofetch": true, // true -> habilita o autofetch
     "git.confirmSync": false, // false -> desabilita a confirmação de sincronização
     "git.suggestSmartCommit": false, // false -> desabilita a sugestão de commit inteligente
-    //Todo Tree
-    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
-    "todo-tree.highlights.customHighlight": {
-        "TODO": {
-            "icon": "check",
-            "type": "line",
-            "iconColour": "#ffe100b5",
-            "foreground": "#fc0404",
-            "background": "#ffe100"
-        },
-        "FIXME": {
-            "icon": "beaker",
-            "iconColour": "#fc0404",
-            "foreground": "#ffffff",
-            "background": "#fc0404"
-        },
-        "BUG": {
-            "icon": "bug",
-            "type": "line",
-            "iconColour": "#fc0404",
-            "foreground": "#ffffff",
-            "background": "#fc0404"
-        },
-        "INFO": {
-            "icon": "info",
-            "iconColour": "#ffffff",
-            "foreground": "#ffffff",
-            "background": "#000000"
-        },
-        "NOTE": {
-            "icon": "note",
-            "iconColour": "#00ff00",
-            "foreground": "#000000",
-            "background": "#00ff00"
-        },
-        "HACK": {
-            "foreground": "#ffffff",
-            "background": "#ff00ff"
-        },
-        "REVIEW": {
-            "icon": "eye",
-            "iconColour": "#0000ff",
-            "foreground": "#ffffff",
-            "background": "#0000ff"
-        },
-        "[]": {
-            "icon": "circle",
-            "type": "line",
-            "iconColour": "#ff0000", // Vermelho para tarefas pendentes
-            "foreground": "#ff0000",
-            "background": "#0000007b"
-        },
-        "[x]": {
-            "icon": "check-circle",
-            "type": "line",
-            "iconColour": "#00ff00", // Verde para tarefas concluídas
-            "foreground": "#00ff00",
-            "background": "#0000007b"
-        }
-    },
-    "todo-tree.general.tags": [
-        "TODO",
-        "FIXME",
-        "BUG",
-        "INFO",
-        "NOTE",
-        "HACK",
-        "REVIEW",
-        "[]",
-        "[x]"
-    ],
     // Prettier
     "editor.defaultFormatter": "esbenp.prettier-vscode", // esbenp.prettier-vscode -> formatador padrão
     "prettier.trailingComma": "all", // all -> adiciona vírgula no final
@@ -388,126 +317,13 @@
     "cSpell.spellCheckOnlyWorkspaceFiles": true, // true -> verifica apenas os arquivos do espaço de trabalho
     "cSpell.enabledFileTypes": {
         "*": true,
-        "markdown": false,
+        "markdown": true,
         "json": false,
         "yaml": false,
     },
-    "cSpell.userWords": [
-        "AGREGACAO",
-        "Atualizacao",
-        "autofetch",
-        "autoimport",
-        "BASEPATH",
-        "basicos",
-        "bmewburn",
-        "bootcamp",
-        "calendario",
-        "Cascadia",
-        "Catppuccin",
-        "chakra",
-        "checkin",
-        "checkins",
-        "clsx",
-        "Codegen",
-        "codigo",
-        "combustivel",
-        "conteudo",
-        "criterio",
-        "datadog",
-        "Datetime",
-        "dayjs",
-        "desativacao",
-        "descricao",
-        "devolucao",
-        "Devolucao",
-        "Dexie",
-        "disponivel",
-        "Dotenv",
-        "esbenp",
-        "esbuild",
-        "fastify",
-        "Fastify",
-        "feedbackwidget",
-        "ffprobe",
-        "fipe",
-        "funcoes",
-        "grafico",
-        "graficos",
-        "historico",
-        "Hono",
-        "intelephense",
-        "IUGU",
-        "jamjuree",
-        "jdbc",
-        "jupiter",
-        "jupyter",
-        "lclz",
-        "liveblocks",
-        "LIVEBLOCKS",
-        "liveshare",
-        "lockb",
-        "manutencao",
-        "middlewares",
-        "mixpanel",
-        "monaco",
-        "movimentacao",
-        "nestjs",
-        "odometro",
-        "omni",
-        "Omni",
-        "Onboarded",
-        "pallas",
-        "parametros",
-        "permissao",
-        "postgres",
-        "postgresql",
-        "prefetch",
-        "preparacao",
-        "previsao",
-        "programfiles",
-        "proximas",
-        "reactflow",
-        "reativacao",
-        "rgba",
-        "roboto",
-        "rocketseat",
-        "rotion",
-        "rsxp",
-        "Sandpack",
-        "selecao",
-        "Selecao",
-        "sequelizerc",
-        "shiki",
-        "situacao",
-        "situacoes",
-        "skylab",
-        "sqlite",
-        "stylelintrc",
-        "stylesheet",
-        "supergraph",
-        "svgr",
-        "sympla",
-        "Sysnative",
-        "textblock",
-        "tiptap",
-        "trpc",
-        "TRPC",
-        "tsup",
-        "unfollow",
-        "Unfollow",
-        "unform",
-        "Unform",
-        "unmark",
-        "upsert",
-        "usuario",
-        "Usuario",
-        "usuarios",
-        "utilitarias",
-        "utilizacao",
-        "veiculos",
-        "WEBPUSH",
-        "windir"
-    ],
+    // atualizacao
+    "cSpell.caseSensitive": true,
+    "cSpell.userWords": [],
     "markdown.extension.theming.decoration.renderLink": true,
     "markdown.preview.breaks": true,
     "catppuccin.extraBordersEnabled": true,
